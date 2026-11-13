@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import os
-
+from snowflake.snowpark.functions import col, when_matched
 
 st.title('App to demonstrate how to create a Bar Graph From Dataframe')
 
