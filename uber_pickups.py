@@ -39,7 +39,7 @@ st.write(""" Here are the steps starting with data engineering:
 
 # 1. Connection and Session Setup - Initialize connection and session at the script level for Snowpark sessions. Streamlit’s native st.connection abstracts away connection pooling, secrets management (.streamlit/secrets.toml), and reconnect logic. The session = conn.session() line bridges Streamlit to Snowpark, giving you access to Snowflake’s native execution API if needed.
 
-# conn = st.connection("snowflake", ttl=os.getenv("SNOWFLAKE_CONNECTION_TTL"))
+conn = st.connection("snowflake", ttl=os.getenv("SNOWFLAKE_CONNECTION_TTL"))
 # session = conn.session()
 
 cnx = st.connection("snowflake")
